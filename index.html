@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>airbnb clone using tailwind css</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+	<header>
+
+		<!-------------------navbar----------------------->
+	  <div class="grid grid-cols-3 px-16 w-screen h-20 border-b-[1px] items-center fixed top-0 bg-white">
+
+	  	<img src="Airbnb-logo.png" class="h-16 w-28">
+
+	  	<div class="flex justify-evenly items-center border rounded-full shadow-md h-12 w-96">
+	  		<button class="border-r-2 text-sm font-medium px-4">Anywhere</button>
+	  		<button class="border-r-2 text-sm font-medium px-4">Any week</button>
+	  		<button class=" text-sm font-medium text-gray-500 px-4">Add guests</button>
+	  		<img src="search.png" class="h-[30px] w-[30px] bg-red-300  text-white rounded-full p-1">
+	  	</div>
+
+	  	<div class="flex justify-end items-center gap-8">
+	  		<button class=" text-sm font-medium">Airbnb your home</button>
+	  		<img src="globe.png" class="h-[24px] w-[24px]">
+	  		<div class="flex justify-evenly items-center gap-2 rounded-full border shadow-md h-10 w-20 py-1.25 pr-1.25 pl-2">
+	  			<img src="menu.png" class="h-[24px] w-[24px]">
+	  			<button class="bg-red-500  text-white rounded-full text-center w-7 h-7 text-[14px] font-semibold">S</button>
+	  		</div>
+	  		
+	  	</div>
+	  	
+	  </div>
+
+
+
+		<!-------------------category bar----------------------->
+		<div class="flex items-center h-24 space-x-5 fixed top-20 bg-white">
+			<div class="flex items-center justify-center space-x-10">
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 pl-16">
+					<img src="img1.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Amazing Pools </p>
+				</div>   	
+
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+					<img src="img2.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Play</p>
+				</div>   	
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img3.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Historical Home</p>
+				</div>   	
+
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img4.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Countryside</p>
+				</div>   	
+
+			
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+					<img src="img5.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Surfing</p>
+				</div>   	
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img6.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Farms</p>
+				</div>   	
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+					<img src="img7.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Amazing views</p>
+				</div>   	
+			
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+					<img src="img8.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Rooms</p>
+				</div>   	
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+					<img src="img9.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Lakefront</p>
+				</div>   	
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img10.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Beachfront</p>
+				 </div>   
+		
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img11.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">OMG!</p>
+				</div>   	
+
+				<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+					<img src="img12.png " class="h-6 w-6">
+				    <p class="text-xs font-normal">Golfing</p>
+				</div>   	
+			</div>
+
+
+			<img src="circle.png" class="pl-16">
+			<div class="flex justify-around items-center rounded-xl shadow-md h-12 w-24 border">
+				<img src="filter.png" class="pl-2">
+				<p class="text-xs font-medium pr-2" >Filters</p>
+			</div>
+			
+		</div>
+
+<!-------------------price bar----------------------->
+		<div class="flex justify-center mt-48">
+			<div class="flex justify-between items-center border rounded-xl w-[600px] h-16 p-4">
+				<div class="flex justify-start">
+					<p class="border-r-2 border-gray-100 pr-4 text-base font-medium">Display total price</p>
+					<p class="pl-4 text-gray-400 text-base">Includes all fees, before taxes</p>
+				</div>
+
+				<img src="toggle_off.png " class="h-7 w-7">
+				
+			</div>
+			
+		</div>
+
+	</header>
+
+
+	<!---------------------------main----------------------------------->
+
+	<main class="mt-14 mx-10">
+		<div class="grid grid-cols-4">
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/4e61ebc9-5a7a-454d-9ad2-b61a3e6c174c.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-675108014847583143/original/a40ae4d9-6f8d-45d4-9994-5a004d31bcea.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Anjar, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">545 kilometres away</p>
+				<p class="text-sm text-gray-400">1–6 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;34,990 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-873547884484345103/original/eae1b830-afa2-4b88-a3a8-84a5774d4c62.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Singanapalya, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">788 kilometres away</p>
+				<p class="text-sm text-gray-400">1–6 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;8,220 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-585226496113729620/original/8c5c9f3f-013e-4658-80ef-d5f7d5a96b5e.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Mahabaleshwar, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">155 kilometres away</p>
+				<p class="text-sm text-gray-400">21–26 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;5,640 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/ecdb8451-a26c-4d34-9a93-37dd2ef3a2f2.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Avalas, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">53 kilometres away</p>
+				<p class="text-sm text-gray-400">6–11 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;3,058 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/e599318b-f812-4aeb-9097-8c4809c5cd3b.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Velhe, Torna-Rajgad, India </p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">126 kilometres away</p>
+				<p class="text-sm text-gray-400">10–15 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;19,233 night</p>
+				
+			</div>
+
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-977962436874986918/original/18def24e-74a7-4879-a235-6be0ef85795a.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Sangapur, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">561 kilometres away</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2,839 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/4e61ebc9-5a7a-454d-9ad2-b61a3e6c174c.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/65d56117-1499-4d96-92e4-545c2174b9ad.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Kanakamamidi, India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">602 kilometres away</p>
+				<p class="text-sm text-gray-400">6–11 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;10,110  night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-50647280/original/835e0c25-e982-45d7-a185-96ec53c9cf57.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-52816260/original/5918f741-2cbb-4e49-b18c-f07ad8ca4573.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-669873114915769259/original/5ec53027-79f2-4e47-a2a2-5c55eb69045d.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/2f205690-c95a-455b-8f07-ff86e9df18c6.jpg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-803541464366243564/original/629784e9-f0e8-4902-b085-ade539dd5af0.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Koh Samui,Thailand</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">19-24 Feb</p>
+				<p class="text-sm font-medium mt-2">&#8377;1,74,091 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-614999697248063015/original/a5e9ab54-386a-448e-b811-e4afc1966ede.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+			<div class="flex flex-col h-96 w-72">
+				<img src="https://a0.muscache.com/im/pictures/miso/Hosting-31205901/original/c3b5d0da-c2fd-42ea-acfe-2f629ae00972.jpeg?im_w=720" class="w-72 h-64 rounded-xl">
+				<div class="flex justify-between mt-2">
+					<p class="text-sm font-medium">Puducherry,India</p>
+					<div class="flex">
+					<i class="fa-solid fa-star" ></i>
+					<p class="text-sm font-light">5.0</p>
+				    </div>
+				</div>
+				<p class="text-sm text-gray-400">Beach and ocean views</p>
+				<p class="text-sm text-gray-400">7-12 Jan</p>
+				<p class="text-sm font-medium mt-2">&#8377;2000 night</p>
+				
+			</div>
+
+
+		</div>
+		
+	</main>
+
+	<!----------------------------footer----------------------------------->
+	<footer class="flex justify-between h-7 items-center px-10 fixed bottom-0 w-screen bg-white">
+
+		<div class="flex text-sm font-base space-x-2">
+			<p>© 2023 Airbnb, Inc.</p>
+			<p>·</p>
+			<p>Privacy</p>
+			<p>Terms</p>
+			<p>Sitemap</p>
+			<p>Company  details</p>
+			
+		</div>
+
+	</footer>
+
+</body>
+</html>
